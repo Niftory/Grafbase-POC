@@ -1,0 +1,19 @@
+{
+  "name": "chinook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "grafbase dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.5.3",
+    "drizzle-orm": "^0.27.2"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.19.8"
+  }
+}
