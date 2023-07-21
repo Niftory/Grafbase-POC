@@ -1,0 +1,27 @@
+type Artist {
+  ArtistId: Int!
+  Name: String
+  Album: [Album]
+}
+
+type Album {
+  AlbumId: Int!
+  Title: String
+  ArtistId: Int!
+  Track: [Track]
+}
+
+type Track {
+  TrackId: Int!
+  Name: String
+  Composer: String
+  Milliseconds: Int
+  Bytes: Int
+  UnitPrice: Int
+}
+
+extend type Query {
+  artists: [Artist] @resolver(name: "artists")
+  artistsWithAlbum: [Artist] @resolver(name: "artistsWithAlbum")
+  artistsWithAlbumTrack: [Artist] @resolver(name: "artistsWithAlbumTrack")
+}
